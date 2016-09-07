@@ -100,7 +100,7 @@ gulp.task("js", ['eslint'], function () {
 
 // es2015 linting
 gulp.task('eslint', function() {
-    return gulp.src(['app/src/js/**/*.babel.js'])
+    return gulp.src(['app/src/js/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format());
 });
