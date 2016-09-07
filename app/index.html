@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Read file test</title>
+    <link rel="stylesheet" type="text/css" href="/dist/css/style.css">
+</head>
+<body>
+<form>
+    <h1>Read file test</h1>
+    <label for="file">File to read:</label>
+    <br />
+    <input type="file" name="file" id="file">
+    <br />
+    <br />
+    <input type="submit" value="Submit">
+</form>
+</body>
+<script type="text/javascript">
+    var form = document.getElementsByTagName('form')[0];
+    var input = document.getElementById('file');
+
+    function submit(e) {
+
+        // prevent form submission
+        e.preventDefault();
+
+        // create file reader instance
+        var fileReader = new FileReader();
+
+        // handle behaviour on load
+        fileReader.onload = function() {
+
+            // parse and log the content as JS object
+            var obj = JSON.parse(fileReader.result);
+            console.log(obj);
+
+        }
+
+        // request and read file
+        fileReader.readAsText(input.files[0]);
+
+        // make sure form doesn't submit
+        return false;
+    }
+
+    window.addEventListener('submit', submit);
+</script>
+</html>

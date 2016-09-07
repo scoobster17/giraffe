@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// import copy of foundation settings and foundation mixin code
+// (includes reset; normalize-css). Node_modules paths resolved by gulp.
+@import 'settings/_settings';
+@import 'foundation';
+
+// manually include foundation modules used, to avoid unnecessary CSS
+@include foundation-accordion;
+
+// custom css
+body {
+    color: red;
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Graph Data",
+    "results": [
+        [
+            {
+                "time": 1,
+                "score": 9
+            },
+            {
+                "time": 2,
+                "score": 10
+            },
+            {
+                "time": 3,
+                "score": 8
+            },
+            {
+                "time": 4,
+                "score": 6
+            },
+            {
+                "time": 5,
+                "score": 7
+            }
+        ]
+    ]
+}
